@@ -12,7 +12,7 @@ import com.myapp.model.Car;
 public class AppController {
  
     @RequestMapping(value="/cargarage/{carname}", method = RequestMethod.GET)
-    public String getPizza(@PathVariable String carname, ModelMap model) {
+    public String getCar(@PathVariable String carname, ModelMap model) {
     	Car car = new Car(carname);
         model.addAttribute("car", car);
         return "car";
